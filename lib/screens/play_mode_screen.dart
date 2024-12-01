@@ -11,7 +11,7 @@ class _PlayModeScreenState extends State<PlayModeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfff6f6f6),
+      backgroundColor: const Color(0xfff6f6f5),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
