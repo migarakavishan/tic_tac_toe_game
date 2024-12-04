@@ -21,7 +21,7 @@ class _PlayModeScreenState extends State<PlayModeScreen> {
               children: [
                 Image.asset(
                   'assets/cross.png',
-                  width: 100,
+                  width: 200,
                 ),
                 Image.asset(
                   'assets/circle.png',
