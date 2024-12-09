@@ -121,12 +121,25 @@ class _GameScreenState extends State<GameScreen> {
           const SizedBox(
             height: 20,
           ),
-          Text(winner, style: TextStyle(fontSize: 24, color: Colors.red),),
-          SizedBox(height: 20,),
-          ElevatedButton(onPressed: () {
-            
-          }, child: Text('Rest Game',))
-
+          Text(
+            winner,
+            style: const TextStyle(fontSize: 24, color: Colors.red),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(200, 50),
+                  backgroundColor: Colors.blue,
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  elevation: 10,
+                  shadowColor: Colors.blueGrey),
+              onPressed: resetBoard,
+              child: const Text(
+                'Rest Game',
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ))
         ],
       ),
     );
@@ -222,5 +235,16 @@ class _GameScreenState extends State<GameScreen> {
         }
       });
     }
+  }
+
+  void resetBoard() {
+    setState(() {
+      board = List.filled(9, '');
+      winner = '';
+      currentPlayer = widget.playerSide == 'O' ? 'X' : 'X';
+      if (widget.playerSide == 'O' && widget.isAi) {
+        aiMove();
+      }
+    });
   }
 }
