@@ -16,7 +16,7 @@ class _GameScreenState extends State<GameScreen> {
   int playerScore = 0;
   int aiScore = 0;
   String playerOneName = 'Player';
-  String playerTwoName = 'AI';
+  String playerTwoName = 'Ai';
 
   @override
   void initState() {
