@@ -80,7 +80,7 @@ class _PlayModeScreenState extends State<PlayModeScreen> {
                       ));
                 },
                 child: const Text(
-                  "With Friend",
+                  "With Friends",
                   style: TextStyle(fontSize: 24, color: Colors.black),
                 )),
           ],
